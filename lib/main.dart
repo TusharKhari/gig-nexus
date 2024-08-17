@@ -47,7 +47,7 @@ class _StartNavigationScreenState extends State<StartNavigationScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    // FlutterNativeSplash.remove();
+    FlutterNativeSplash.remove();
     super.initState();
   }
 
