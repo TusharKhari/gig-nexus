@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gig_nexus/features/home/home.dart';
+import 'package:gig_nexus/utils/constants/app_constants.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -10,9 +12,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int selectedIndex = 0;
   List items = [
-    Center(
-      child: Text("Home"),
-    ),
+    Home(),
     Center(
       child: Text("Compains"),
     ),
@@ -29,30 +29,48 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appColorsConst.cWhite,
       bottomNavigationBar: SizedBox(
           height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(
-                onPressed: () {
-                  setState(() {
-                    selectedIndex = 0;
-                  });
-                },
-                icon: Icon(
-                  Icons.abc,
-                  color: selectedIndex == 0 ? Colors.green : null,
-                ),
-              ),
+                  onPressed: () {
+                    setState(() {
+                      selectedIndex = 0;
+                    });
+                  },
+                  icon: Image.asset(
+                    appImagesConst.homeIcon,
+                    scale: 4,
+                    fit: BoxFit.none,
+                    color: selectedIndex == 0
+                        ? appColorsConst.cBlue
+                        : appColorsConst.grey,
+                  )),
+
+              //   Icon(
+              //     Icons.abc,
+              //     color: selectedIndex == 0 ? Colors.green : null,
+              //   ),
+              // )
+
               IconButton(
-                onPressed: () {
-                  setState(() {
-                    selectedIndex = 1;
-                  });
-                },
-                icon: Icon(Icons.do_disturb),
-              ),
+                  onPressed: () {
+                    setState(() {
+                      selectedIndex = 1;
+                    });
+                  },
+                  icon: Image.asset(
+                    appImagesConst.campaignsIcon,
+                    scale: 4,
+                    fit: BoxFit.none,
+                    color: selectedIndex == 1 ? appColorsConst.cBlue : null,
+                  )
+
+                  // Icon(Icons.do_disturb),
+                  ),
               IconButton(
                 onPressed: () {
                   setState(() {

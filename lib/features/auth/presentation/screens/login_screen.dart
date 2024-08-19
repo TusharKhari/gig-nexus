@@ -75,24 +75,160 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
 
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: 18),
               child: CustomTextField(
+                keyboardType: TextInputType.number,
+                maxLength: 10,
                 hintText: "Enter Phone Number",
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 18),
               child: Button(
                 width: double.infinity,
                 fontSize: 16,
                 onPressed: () {
                   Get.toNamed(appRouteNamesConst.otpVerificationScreen);
                 },
-                title: "Login",
+                title: "Sign In",
               ),
+            ),
+            const SizedBox(
+              height: 18,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18),
+              child: Text(
+                "By signing in, you agree to our Terms and Conditions & Privacy Policy.",
+                style:
+                    TextStyle(color: appColorsConst.borderWhite, fontSize: 14),
+              ),
+            ),
+            const SizedBox(
+              height: 44,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'WELCOME TO ',
+                          style: TextStyle(
+                            color: Colors.blue.shade900,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: 'GIG',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: ' N',
+                          style: TextStyle(
+                            color: Colors.orange,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: 'E',
+                          style: TextStyle(
+                            color: Colors.yellow,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: 'X',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: 'U',
+                          style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(
+                          text: 'S',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '!',
+                          style: TextStyle(
+                            color: Colors.blue.shade900,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    'PLEASE SIGN IN TO CONTINUE.',
+                    style: TextStyle(
+                      color: Colors.blue.shade900,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(
+              height: 44,
+            ),
+
+            RichText(
+              text: TextSpan(
+                style: TextStyle(
+                  color: appColorsConst.borderWhite,
+                  fontSize: 16,
+                ),
+                children: const [
+                  TextSpan(
+                    text: 'Terms & Conditions',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                  TextSpan(
+                    text: ', ',
+                  ),
+                  TextSpan(
+                    text: 'Privacy Policy',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
             )
             // Image(image: )
           ],
