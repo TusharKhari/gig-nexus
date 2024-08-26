@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gig_nexus/features/onboarding/profile_detail_screen.dart';
 import 'package:gig_nexus/utils/widgets/button.dart';
 import 'package:gig_nexus/utils/widgets/customTextField.dart';
 import 'package:pinput/pinput.dart';
@@ -136,9 +137,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
             const SizedBox(
               height: 34,
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 18),
               child: Button(
+                onPressed: () {
+                  Get.to(ProfileDetailScreen());
+                },
                 width: double.infinity,
                 title: "Submit",
               ),
@@ -182,6 +186,19 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     style: TextStyle(fontSize: 21, color: appColorsConst.cBlue),
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18),
+              child: Text(
+                "Powered By GIGNEXUS",
+                style: TextStyle(
+                    fontSize: 18,
+                    color: appColorsConst.gigNexusColor,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             TextButton(

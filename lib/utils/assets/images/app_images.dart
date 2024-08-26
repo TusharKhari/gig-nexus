@@ -14,4 +14,9 @@ class AppImages {
   String walletIcon = "assets/images/walletIcon.png";
   String homeIcon = "assets/images/homeIcon.png";
   String campaignsIcon = "assets/images/campaignsIcon.png";
+  String callIcon = "assets/images/Call.png";
+  String notesIcon = "assets/images/notesIcon.png";
+  String lockIcon = "assets/images/lockIcon.png";
+  String profileBackgroundImage = "assets/images/profileBackgroundImage.png";
+  String personImage = "assets/images/personImage.png";
 }
