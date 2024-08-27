@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:gig_nexus/common/custom_field_with_header.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
+import 'package:gig_nexus/common/button.dart';
 
-import '../../common/custom_field_with_header.dart';
-import '../../common/button.dart';
-import '../../common/customTextField.dart';
-import 'kyc_details_screen.dart';
-
-class ProfileDetailScreen extends StatefulWidget {
-  const ProfileDetailScreen({super.key});
-
-  @override
-  State<ProfileDetailScreen> createState() => _ProfileDetailScreenState();
-}
-
-class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
+class KYCDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: appColorsConst.cWhite,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(right: 18, left: 18, bottom: 18),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 40,
@@ -44,7 +34,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                     width: MediaQuery.of(context).size.width * 0.18,
                   ),
                   const Text(
-                    "Profile Detail",
+                    "KYC Details",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: Color(0xff1E1E1E),
@@ -98,7 +88,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
               Stack(
                 children: [
                   Center(
-                    child: Image.asset(appImagesConst.profileBackgroundImage,
+                    child: Image.asset(appImagesConst.kycImage,
                         width: 200, height: 200, fit: BoxFit.fill),
                   ),
                   Padding(
@@ -111,74 +101,86 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                   Positioned(
                     bottom: 0,
                     right: 95,
-                    child: Image.asset(appImagesConst.plusIcon,
+                    child: Image.asset(appImagesConst.cameraIcon,
                         width: 50, height: 50, fit: BoxFit.fill),
                   )
                 ],
               ),
               CustomFieldWithHeader(
-                heading: "Full Name",
-                hintText: "Enter Full Name",
+                heading: "Pan Number",
+                hintText: "Enter Pan Number",
+                bottomMargin: 2,
+              ),
+              Text(
+                "Your Pan number is totally secure",
+                style: TextStyle(color: appColorsConst.grey, fontSize: 14),
+              ),
+              SizedBox(
+                height: 18,
+              ),
+              Text(
+                "Bank Account Details",
+                style: TextStyle(
+                    color: appColorsConst.cBlack,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 18,
               ),
               CustomFieldWithHeader(
-                heading: "Gender",
-                hintText: "Gender",
-                suffixIcon: Icon(Icons.keyboard_arrow_down_sharp),
-              ),
-              CustomFieldWithHeader(
-                heading: "Date of Birth",
-                hintText: "Gender",
-                suffixIcon: Icon(Icons.calendar_month),
-              ),
-              CustomFieldWithHeader(
-                heading: "Your Profession",
-                hintText: "Please Select",
-                suffixIcon: Icon(Icons.keyboard_arrow_down_sharp),
-              ),
-              CustomFieldWithHeader(
-                heading: "More About Profession",
-                hintText: "Your Expertise",
-                suffixIcon: Icon(Icons.keyboard_arrow_down_sharp),
-              ),
-              CustomFieldWithHeader(
-                heading: "Address Line 1",
-                hintText: "Address Line 1",
-              ),
-              CustomFieldWithHeader(
-                heading: "Address Line 2",
-                hintText: "Address Line 2",
-              ),
-              CustomFieldWithHeader(
-                heading: "State",
+                heading: "Bank Name",
                 hintText: "Please Select",
                 suffixIcon: Icon(
                   Icons.keyboard_arrow_down_sharp,
-                  color: appColorsConst.grey,
-                  size: 32,
+                  color: appColorsConst.lightGrey,
                 ),
               ),
               CustomFieldWithHeader(
-                heading: "City",
-                hintText: "Please Select",
-                suffixIcon: Icon(
-                  Icons.keyboard_arrow_down_sharp,
-                  color: appColorsConst.grey,
-                  size: 32,
-                ),
+                heading: "Branch Name",
+                hintText: "Enter Branch Name",
               ),
               CustomFieldWithHeader(
-                heading: "Pin code",
-                hintText: "Enter Pin code",
+                heading: "Bank Account Number",
+                hintText: "Enter Bank Account Number",
+              ),
+              CustomFieldWithHeader(
+                heading: "IFSC Code",
+                hintText: "Enter IFSC Code",
+              ),
+              Text(
+                "Upload Checkbook/Passbook/Bank Statement (Front Page)",
+                style: TextStyle(color: appColorsConst.cBlack, fontSize: 12),
+              ),
+              SizedBox(
+                height: 12,
               ),
               Button(
+                borderColor: appColorsConst.cBlue,
+                buttonColor: appColorsConst.cWhite,
                 width: double.infinity,
-                fontSize: 16,
-                onPressed: () {
-                  // Get.toNamed(appRouteNamesConst.otpVerificationScreen);
-                  Get.to(KYCDetailsScreen());
-                },
-                title: "Next",
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(appImagesConst.uploadIcon,
+                        width: 15, height: 15, fit: BoxFit.fill),
+                    Text(
+                      "Upload",
+                      style: TextStyle(
+                          color: appColorsConst.cBlue,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500),
+                    )
+                  ],
+                ),
               ),
+              SizedBox(
+                height: 18,
+              ),
+              Button(
+                title: "Submit",
+                width: double.infinity,
+              )
             ],
           ),
         ),

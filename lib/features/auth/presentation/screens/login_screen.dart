@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
-import 'package:gig_nexus/utils/widgets/button.dart';
-import 'package:gig_nexus/utils/widgets/customTextField.dart';
+import 'package:gig_nexus/common/button.dart';
+import 'package:gig_nexus/common/customTextField.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

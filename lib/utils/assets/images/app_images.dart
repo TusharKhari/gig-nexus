@@ -19,4 +19,8 @@ class AppImages {
   String lockIcon = "assets/images/lockIcon.png";
   String profileBackgroundImage = "assets/images/profileBackgroundImage.png";
   String personImage = "assets/images/personImage.png";
+  String plusIcon = "assets/images/plusIcon.png";
+  String kycImage = "assets/images/kycImage.png";
+  String cameraIcon = "assets/images/cameraIcon.png";
+  String uploadIcon = "assets/images/uploadIcon.png";
 }

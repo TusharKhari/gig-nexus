@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
-import 'package:gig_nexus/utils/widgets/label.dart';
+import 'package:gig_nexus/common/label.dart';
 
 class Button extends StatelessWidget {
   final String? title;
@@ -38,7 +38,7 @@ class Button extends StatelessWidget {
       width: width ?? 150,
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: appColorsConst.cBlue,
+        color: buttonColor ?? appColorsConst.cBlue,
         borderRadius: BorderRadius.all(Radius.circular(14)),
       ),
       child: ElevatedButton(
