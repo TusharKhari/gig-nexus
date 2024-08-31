@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         // Use builder only if you need to use library outside ScreenUtilInit context
         builder: (_, child) {
-          return StartNavigationScreen();
+          return const StartNavigationScreen();
         },
         child: const StartNavigationScreen(),
       ),
@@ -47,12 +47,12 @@ class _StartNavigationScreenState extends State<StartNavigationScreen> {
   @override
   void initState() {
     // TODO: implement initState
-    FlutterNativeSplash.remove();
+    // FlutterNativeSplash.remove();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return LoginScreen();
+    return const LoginScreen();
   }
 }

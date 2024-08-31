@@ -7,7 +7,7 @@ class AppImages {
   AppImages._internal();
   // ===================
   String appThemeImagePNG = "assets/images/appThemeImage.png";
-  String appLogoImagePNG = "assets/images/appLogo.png";
+  String appLogoImagePNG = "assets/images/appLogoWhite.png";
   String heartImagePNG = "assets/images/heart.png";
   String profileImage = "assets/images/profileImage.png";
   String notificationImage = "assets/images/notificationImage.png";

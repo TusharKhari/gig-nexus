@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:gig_nexus/common/custom_field_with_header.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
 import 'package:gig_nexus/common/button.dart';
@@ -115,7 +116,7 @@ class KYCDetailsScreen extends StatelessWidget {
                 "Your Pan number is totally secure",
                 style: TextStyle(color: appColorsConst.grey, fontSize: 14),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Text(
@@ -125,7 +126,7 @@ class KYCDetailsScreen extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               CustomFieldWithHeader(
@@ -152,7 +153,7 @@ class KYCDetailsScreen extends StatelessWidget {
                 "Upload Checkbook/Passbook/Bank Statement (Front Page)",
                 style: TextStyle(color: appColorsConst.cBlack, fontSize: 12),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Button(
@@ -174,10 +175,13 @@ class KYCDetailsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
               Button(
+                onPressed: () {
+                  Get.toNamed(appRouteNamesConst.bottomNavBar);
+                },
                 title: "Submit",
                 width: double.infinity,
               )

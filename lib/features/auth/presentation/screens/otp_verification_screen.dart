@@ -201,18 +201,18 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                Get.toNamed(appRouteNamesConst.loginScreen);
-              },
-              child: const Text("Otp"),
-            ),
-            TextButton(
-              onPressed: () {
-                Get.toNamed(appRouteNamesConst.bottomNavBar);
-              },
-              child: const Text("Bottom"),
-            ),
+            // TextButton(
+            //   onPressed: () {
+            //     Get.toNamed(appRouteNamesConst.loginScreen);
+            //   },
+            //   child: const Text("Otp"),
+            // ),
+            // TextButton(
+            //   onPressed: () {
+            //     Get.toNamed(appRouteNamesConst.bottomNavBar);
+            //   },
+            //   child: const Text("Bottom"),
+            // ),
           ],
         ),
       ),
