@@ -22,7 +22,7 @@ class CustomTextField extends StatelessWidget {
   final bool? enabled;
 
   const CustomTextField(
-      {Key? key,
+      {super.key,
       this.controller,
       this.errorText,
       this.suffixIcon,
@@ -40,8 +40,7 @@ class CustomTextField extends StatelessWidget {
       this.fillColor,
       this.borderColor,
       this.borderRadius,
-      this.enabled})
-      : super(key: key);
+      this.enabled});
 
   @override
   Widget build(BuildContext context) {

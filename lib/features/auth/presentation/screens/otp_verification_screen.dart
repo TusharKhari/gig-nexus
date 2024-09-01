@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:gig_nexus/features/onboarding/profile_detail_screen.dart';
+import 'package:gig_nexus/features/onboarding/presentation/profile_detail_screen.dart';
 import 'package:gig_nexus/common/button.dart';
 import 'package:gig_nexus/common/customTextField.dart';
 import 'package:pinput/pinput.dart';

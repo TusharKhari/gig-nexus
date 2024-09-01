@@ -8,8 +8,18 @@ class CustomFieldWithHeader extends StatelessWidget {
   String? hintText;
   Widget? suffixIcon;
   double? bottomMargin;
+  bool? isEnabled;
+  TextInputType? keyboardType;
+  TextEditingController? controller;
   CustomFieldWithHeader(
-      {super.key, this.heading, this.hintText, this.suffixIcon, this.bottomMargin});
+      {super.key,
+      this.heading,
+      this.hintText,
+      this.suffixIcon,
+      this.bottomMargin,
+      this.controller,
+      this.isEnabled,
+      this.keyboardType});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +29,7 @@ class CustomFieldWithHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              this.heading ?? " ",
+              heading ?? " ",
               style: TextStyle(color: appColorsConst.cBlack, fontSize: 16),
             ),
           ],
@@ -28,12 +38,14 @@ class CustomFieldWithHeader extends StatelessWidget {
           height: 12,
         ),
         CustomTextField(
-          suffixIcon: this.suffixIcon,
+          controller: controller,
+          suffixIcon: suffixIcon,
+          enabled: isEnabled,
           // errorText: "Wrong Phone Number",
-          keyboardType: TextInputType.number,
-          hintText: this.hintText,
+          keyboardType: keyboardType ?? TextInputType.number,
+          hintText: hintText,
         ),
-         SizedBox(
+        SizedBox(
           height: bottomMargin ?? 20,
         ),
       ],
