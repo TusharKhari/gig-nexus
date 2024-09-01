@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
 import 'package:gig_nexus/common/button.dart';
@@ -25,9 +26,9 @@ class _LoginScreenState extends State<LoginScreen> {
               Image.asset(
                 appImagesConst.appThemeImagePNG,
                 width: mqW,
-                height: mqH * 0.5,
+                // height: mqH * 0.45,
                 // width: 430,
-                // height: 476,
+                height: 400,
                 fit: BoxFit.fill,
               ),
               Column(
@@ -155,51 +156,58 @@ class _LoginScreenState extends State<LoginScreen> {
                 title: "Sign In",
               ),
             ),
-            const SizedBox(
-              height: 18,
-            ),
-
-            const SizedBox(
-              height: 44,
+            SizedBox(
+              height: 35.h,
             ),
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset(
-                    appImagesConst.notesIcon,
-                    color: appColorsConst.cBlue,
-                    scale: 4,
+                  Flexible(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset(
+                          appImagesConst.notesIcon,
+                          color: appColorsConst.cBlue,
+                          scale: 4,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        const Text(
+                          "Terms & Conditions",
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400),
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text(
-                    "Terms & Conditions",
-                    style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    appImagesConst.lockIcon,
-                    color: appColorsConst.cBlue,
-                    scale: 4,
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Text(
-                    "Privacy Policy",
-                    style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
+                  Flexible(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset(
+                          appImagesConst.lockIcon,
+                          color: appColorsConst.cBlue,
+                          scale: 4,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        const Text(
+                          "Privacy Policy",
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -216,7 +224,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: appColorsConst.gigNexusColor,
                     fontWeight: FontWeight.bold),
               ),
-            )
+            ),
+            20.h.verticalSpace,
 
             // RichText(
             //   text: TextSpan(
