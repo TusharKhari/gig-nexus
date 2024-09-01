@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
+import 'package:gig_nexus/features/auth/controller/auth_controller.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
 import 'package:gig_nexus/common/button.dart';
 import 'package:gig_nexus/common/customTextField.dart';
@@ -13,6 +15,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final AuthController authController = Get.put(AuthController());
   @override
   Widget build(BuildContext context) {
     var mqH = MediaQuery.of(context).size.height;
@@ -96,6 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18),
               child: CustomTextField(
+                controller: authController.phoneNumberController,
                 prefixIcon: Image.asset(
                   appImagesConst.callIcon,
                   color: appColorsConst.textGrey,
@@ -151,7 +155,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 fontSize: 16,
                 onPressed: () {
-                  Get.toNamed(appRouteNamesConst.otpVerificationScreen);
+                  authController.sendOtp();
+                  // Get.toNamed(appRouteNamesConst.otpVerificationScreen);
                 },
                 title: "Sign In",
               ),
