@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "210782059726",
-    "project_id": "gig-nexus",
-    "storage_bucket": "gig-nexus.appspot.com"
+    "project_number": "315278085611",
+    "project_id": "gignexus-7d86a",
+    "storage_bucket": "gignexus-7d86a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:210782059726:android:0fede0a9dd93d0fe02649f",
+        "mobilesdk_app_id": "1:315278085611:android:e001d3fa2d6c3193745dae",
         "android_client_info": {
           "package_name": "com.example.gig_nexus"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA6s97WOcxVLt8kT67SdH4SfYCd2s-33bs"
+          "current_key": "AIzaSyBpoxSOzK0XCwX1A53BxuwszpchCOchpQ8"
         }
       ],
       "services": {
