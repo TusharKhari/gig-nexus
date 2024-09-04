@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:gig_nexus/features/auth/controller/auth_controller.dart';
 import 'package:gig_nexus/features/onboarding/presentation/profile_detail_screen.dart';
 import 'package:gig_nexus/common/button.dart';
 import 'package:gig_nexus/common/customTextField.dart';
@@ -68,10 +69,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               height: 84,
             ),
             Pinput(
-              length: 4,
+              length: 6,
               showCursor: true,
               onCompleted: (pin) {
                 print('Entered OTP: $pin');
+                var c = Get.put(AuthController());
+                c.verifyPhoneNoOtp(otp: pin);
               },
               defaultPinTheme: PinTheme(
                 margin: const EdgeInsets.symmetric(horizontal: 5),
@@ -141,7 +144,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               padding: EdgeInsets.symmetric(horizontal: 18),
               child: Button(
                 onPressed: () {
-                  Get.to(ProfileDetailScreen());
+                  // Get.to(ProfileDetailScreen());
                 },
                 width: double.infinity,
                 title: "Submit",

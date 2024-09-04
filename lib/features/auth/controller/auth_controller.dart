@@ -28,6 +28,61 @@ class AuthController extends GetxController {
     }
   }
 
+  String verificationId = "";
+  RxBool isOtpSent = false.obs;
+  Future<bool?> verificationByPhoneNo({
+    required String phoneNo,
+  }) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+// );
+
+    log("verificationByPhoneNooo ---> $phoneNo");
+    try {
+      await auth.verifyPhoneNumber(
+        phoneNumber: '+91 $phoneNo',
+        // phoneNumber: '+44 7123 123 456',
+        verificationCompleted: (PhoneAuthCredential credential) async {
+          await auth.signInWithCredential(credential);
+          // routeToLastStep(
+          //     step: userData?.data?.user?.onboardingLevel ?? 0,
+          //     isBusiness:
+          //         userData?.data?.user?.type?.contains("business") ?? false);
+          // on otp verified
+        },
+        verificationFailed: (FirebaseAuthException e) {},
+        codeSent: (String verificationIdd, int? resendToken) {
+          verificationId = verificationIdd;
+          log("verificationIdddd ---> $verificationIdd");
+          isOtpSent.value = true;
+        },
+        codeAutoRetrievalTimeout: (String verificationIdd) {
+          verificationId = verificationIdd;
+        },
+      );
+    } catch (e) {
+      log("verificationByPhoneNoo ---> $e");
+    }
+    return isOtpSent.value;
+  }
+
+  Future<void> verifyPhoneNoOtp({required String otp}) async {
+    log("verifyPhoneNoOtpp  $otp");
+    try {
+      FirebaseAuth auth = FirebaseAuth.instance;
+      PhoneAuthCredential credential = PhoneAuthProvider.credential(
+          verificationId: verificationId, smsCode: otp);
+      await auth.signInWithCredential(credential);
+      // auth completed
+    } catch (e) {
+      // error snackbar
+      Get.snackbar(
+        "Error",
+        "$e",
+      );
+      log("verifyPhoneNoOtpp ---> $e");
+    }
+  }
+
   @override
   void dispose() {
     phoneNumberController.dispose();

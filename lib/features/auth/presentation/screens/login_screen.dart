@@ -156,6 +156,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 16,
                 onPressed: () {
                   // authController.sendOtp();
+                  authController.verificationByPhoneNo(
+                      phoneNo: authController.phoneNumberController.text);
                   Get.toNamed(appRouteNamesConst.otpVerificationScreen);
                 },
                 title: "Sign In",
