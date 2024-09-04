@@ -59,4 +59,5 @@ class DefaultFirebaseOptions {
     projectId: 'gignexus-7d86a',
     storageBucket: 'gignexus-7d86a.appspot.com',
   );
+
 }
