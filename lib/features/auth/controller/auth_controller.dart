@@ -73,6 +73,7 @@ class AuthController extends GetxController {
           verificationId: verificationId, smsCode: otp);
       await auth.signInWithCredential(credential);
       // auth completed
+       Get.toNamed(appRouteNamesConst.otpVerificationScreen);
     } catch (e) {
       // error snackbar
       Get.snackbar(
