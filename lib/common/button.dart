@@ -15,10 +15,12 @@ class Button extends StatelessWidget {
   final bool? bold;
   final Widget? icon;
   final double? fontSize;
+  final double? padding;
 
   const Button({
     Key? key,
     this.title,
+    this.padding,
     this.fontSize,
     this.onPressed,
     this.buttonColor,
@@ -59,13 +61,16 @@ class Button extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: child ??
-            Label(
-              title ?? "",
-              fontsize: fontSize ?? 20,
-              color: textColor ?? appColorsConst.cWhite,
-              bold: bold ?? false,
-            ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: padding ?? 0),
+          child: child ??
+              Label(
+                title ?? "",
+                fontsize: fontSize ?? 20,
+                color: textColor ?? appColorsConst.cWhite,
+                bold: bold ?? false,
+              ),
+        ),
       ),
     );
   }

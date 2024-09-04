@@ -14,10 +14,14 @@ class AppImages {
   String walletIcon = "assets/images/walletIcon.png";
   String homeIcon = "assets/images/homeIcon.png";
   String campaignsIcon = "assets/images/campaignsIcon.png";
+  String campaignsIconWithoutText = "assets/images/campaignIconWithoutText.png";
   String callIcon = "assets/images/Call.png";
   String notesIcon = "assets/images/notesIcon.png";
   String lockIcon = "assets/images/lockIcon.png";
   String profileBackgroundImage = "assets/images/profileBackgroundImage.png";
+  String magnetIcon = "assets/images/magnetIcon.png";
+  String airtelLogo = "assets/images/airtelLogo.png";
+  String bankLogo = "assets/images/bankLogo.png";
   String personImage = "assets/images/personImage.png";
   String plusIcon = "assets/images/plusIcon.png";
   String kycImage = "assets/images/kycImage.png";
