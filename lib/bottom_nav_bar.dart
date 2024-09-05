@@ -31,7 +31,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       backgroundColor: appColorsConst.cWhite,
       bottomNavigationBar: SizedBox(
-          height: 100,
+          height: 70,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

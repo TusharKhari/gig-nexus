@@ -16,10 +16,12 @@ class Button extends StatelessWidget {
   final Widget? icon;
   final double? fontSize;
   final double? padding;
+  final double? borderRadius;
 
   const Button({
     Key? key,
     this.title,
+    this.borderRadius,
     this.padding,
     this.fontSize,
     this.onPressed,
@@ -41,7 +43,7 @@ class Button extends StatelessWidget {
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
         color: buttonColor ?? appColorsConst.cBlue,
-        borderRadius: BorderRadius.all(Radius.circular(14)),
+        borderRadius: BorderRadius.all(Radius.circular(borderRadius??14)),
       ),
       child: ElevatedButton(
         style: ButtonStyle(

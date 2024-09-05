@@ -22,6 +22,8 @@ class AppImages {
   String magnetIcon = "assets/images/magnetIcon.png";
   String airtelLogo = "assets/images/airtelLogo.png";
   String bankLogo = "assets/images/bankLogo.png";
+  String howItWorks = "assets/images/howItWorks.png";
+  String chatWithUs = "assets/images/chatWithUs.png";
   String personImage = "assets/images/personImage.png";
   String plusIcon = "assets/images/plusIcon.png";
   String kycImage = "assets/images/kycImage.png";

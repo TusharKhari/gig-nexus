@@ -247,7 +247,9 @@ class _HomeState extends State<Home> {
             // CampaignCard(),
             // CampaignCard(),
             CarouselSlider(
-              options: CarouselOptions(height: 240),
+              options: CarouselOptions(
+                height: 240,
+              ),
               items: [1, 2, 3].map((i) {
                 return Builder(
                   builder: (BuildContext context) {
@@ -255,25 +257,86 @@ class _HomeState extends State<Home> {
                   },
                 );
               }).toList(),
-            )
-            // Padding(
-            //   padding: EdgeInsets.symmetric(horizontal: 16),
-            //   child: SizedBox(
-            //     // height: 200,
-            //     height: MediaQuery.of(context).size.height,
-            //     width: MediaQuery.of(context).size.width,
-            //     child: Row(
-            //       children: [
-            //         ListView.builder(
-            //             shrinkWrap: true,
-            //             itemCount: 5,
-            //             scrollDirection: Axis.horizontal,
-            //             itemBuilder: (BuildContext context, int index) =>
-            //                ),
-            //       ],
-            //     ),
-            //   ),
+            ),
+            // SizedBox(
+            //   height: 250,
+            //   child: LayoutBuilder(builder: (context, constraints) {
+            //     return ListView.builder(
+            //         itemCount: 5,
+            //         scrollDirection: Axis.horizontal,
+            //         itemBuilder: (context, index) {
+            //           return SizedBox(
+            //               width: constraints.maxWidth * 0.8,
+            //               child: CampaignCard());
+            //         });
+            //   }),
             // ),
+            // SizedBox(
+            //   height: 100,
+            // ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              child: Container(
+                height: 150,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  color: const Color(0xffEBEBEB),
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Center(
+                  child: Text(
+                    "Ad banners to be added here",
+                    style: TextStyle(fontSize: 16, color: appColorsConst.grey),
+                  ),
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Quick Actions",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            CarouselSlider(
+              options: CarouselOptions(
+                // aspectRatio: 16 / 9,
+                height: 170,
+              ),
+              items: [
+                appImagesConst.howItWorks,
+                appImagesConst.chatWithUs,
+                appImagesConst.howItWorks,
+                appImagesConst.chatWithUs,
+                // appImagesConst.howItWorks
+              ].map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(i), fit: BoxFit.contain),
+                      ),
+                      padding: EdgeInsets.all(0),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
+
+            
+
+            // )
           ],
         ),
       ),
