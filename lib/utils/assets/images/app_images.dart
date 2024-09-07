@@ -8,6 +8,12 @@ class AppImages {
   // ===================
   String appThemeImagePNG = "assets/images/appThemeImage.png";
   String appLogoImagePNG = "assets/images/appLogoWhite.png";
+  String appLogoBlueImagePNG = "assets/images/appLogoBlue.png";
+  String facebookImage = "assets/images/facebookImage.png";
+  String instagramImage = "assets/images/instagramImage.png";
+  String linkedInImage = "assets/images/linkedInImage.png";
+  String twitterImage = "assets/images/twitterImage.png";
+  String jobImage = "assets/images/jobImage.png";
   String heartImagePNG = "assets/images/heart.png";
   String profileImage = "assets/images/profileImage.png";
   String notificationImage = "assets/images/notificationImage.png";

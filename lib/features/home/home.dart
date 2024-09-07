@@ -1,9 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 import 'package:gig_nexus/common/button.dart';
+import 'package:gig_nexus/features/notification/notification_page.dart';
 import 'package:gig_nexus/utils/colors/app_colors.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
+import 'package:horizontal_list/horizontal_list.dart';
+import 'package:parallax_cards/parallax_cards.dart';
 
 import '../../common/campaignCard.dart';
 import '../../common/customCard.dart';
@@ -81,17 +85,23 @@ class _HomeState extends State<Home> {
                           const SizedBox(
                             width: 90,
                           ),
-                          Container(
-                            // margin: EdgeInsets.all(20),
-                            padding: const EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100),
-                                border: Border.all(
-                                    width: 1, color: appColorsConst.cWhite)),
-                            child: Image.asset(
-                              appImagesConst.notificationImage,
-                              color: appColorsConst.cWhite,
-                              scale: 4,
+                          InkWell(
+                            onTap: () {
+                              Get.to(NotificationPage());
+                            },
+                            child: Container(
+                              // margin: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                  // borderRadius: BorderRadius.circular(100),
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                      width: 1, color: appColorsConst.cWhite)),
+                              child: Image.asset(
+                                appImagesConst.notificationImage,
+                                color: appColorsConst.cWhite,
+                                scale: 4,
+                              ),
                             ),
                           )
                         ],
@@ -306,37 +316,157 @@ class _HomeState extends State<Home> {
               ),
             ),
             const SizedBox(
-              height: 12,
+              height: 0,
             ),
-            CarouselSlider(
-              options: CarouselOptions(
-                // aspectRatio: 16 / 9,
-                height: 170,
+            HorizontalListView(
+              width: double.infinity, //Width of widget
+              height: 140, //Height of widget
+              list: [
+                Container(
+                  margin: EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(appImagesConst.howItWorks),
+                        fit: BoxFit.fill),
+                  ),
+                  padding: EdgeInsets.all(0),
+                ),
+                Container(
+                  margin: EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(appImagesConst.chatWithUs),
+                        fit: BoxFit.fill),
+                  ),
+                  padding: EdgeInsets.all(0),
+                ),
+                Container(
+                  margin: EdgeInsets.all(0),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(appImagesConst.howItWorks),
+                        fit: BoxFit.fill),
+                  ),
+                  padding: EdgeInsets.all(0),
+                ),
+              ],
+              curveAnimation: Curves.bounceIn,
+              durationAnimation: Duration(milliseconds: 300),
+              enableManualScroll: true,
+            ),
+
+            Container(
+              margin: EdgeInsets.all(0),
+              height: 200,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(appImagesConst.appLogoBlueImagePNG),
+                    fit: BoxFit.contain,
+                    scale: 2),
               ),
-              items: [
-                appImagesConst.howItWorks,
-                appImagesConst.chatWithUs,
-                appImagesConst.howItWorks,
-                appImagesConst.chatWithUs,
-                // appImagesConst.howItWorks
-              ].map((i) {
-                return Builder(
-                  builder: (BuildContext context) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(i), fit: BoxFit.contain),
-                      ),
-                      padding: EdgeInsets.all(0),
-                    );
-                  },
-                );
-              }).toList(),
+              padding: EdgeInsets.all(0),
             ),
 
-            
+            // HorizontalListView(
+            //   width: double.infinity, //Width of widget
+            //   height: 100, //Height of widget
+            //   list: [
+            //     Container(
+            //       margin: EdgeInsets.all(0),
+            //       decoration: BoxDecoration(
+            //         image: DecorationImage(
+            //             image: AssetImage(appImagesConst.facebookImage),
+            //             fit: BoxFit.contain),
+            //       ),
+            //       padding: EdgeInsets.all(0),
+            //     ),
+            //     Container(
+            //       margin: EdgeInsets.all(0),
+            //       decoration: BoxDecoration(
+            //         image: DecorationImage(
+            //             image: AssetImage(appImagesConst.instagramImage),
+            //             fit: BoxFit.contain),
+            //       ),
+            //       padding: EdgeInsets.all(0),
+            //     ),
+            //     Container(
+            //       margin: EdgeInsets.all(0),
+            //       decoration: BoxDecoration(
+            //         image: DecorationImage(
+            //             image: AssetImage(appImagesConst.linkedInImage),
+            //             fit: BoxFit.contain),
+            //       ),
+            //       padding: EdgeInsets.all(0),
+            //     ),
+            //     Container(
+            //       margin: EdgeInsets.all(0),
+            //       decoration: BoxDecoration(
+            //         image: DecorationImage(
+            //             image: AssetImage(appImagesConst.twitterImage),
+            //             fit: BoxFit.contain),
+            //       ),
+            //       padding: EdgeInsets.all(0),
+            //     ),
+            //   ],
+            //   curveAnimation: Curves.bounceIn,
+            //   durationAnimation: Duration(milliseconds: 300),
+            //   enableManualScroll: true,
+            // ),
 
-            // )
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                children: [
+                  Container(
+                    height: 102,
+                    width: 102,
+                    margin: EdgeInsets.all(0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(appImagesConst.facebookImage),
+                          fit: BoxFit.contain),
+                    ),
+                    padding: EdgeInsets.all(0),
+                  ),
+                  Container(
+                    height: 102,
+                    width: 102,
+                    margin: EdgeInsets.all(0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(appImagesConst.instagramImage),
+                          fit: BoxFit.contain),
+                    ),
+                    padding: EdgeInsets.all(0),
+                  ),
+                  Container(
+                    height: 102,
+                    width: 102,
+                    margin: EdgeInsets.all(0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(appImagesConst.linkedInImage),
+                          fit: BoxFit.contain),
+                    ),
+                    padding: EdgeInsets.all(0),
+                  ),
+                  Container(
+                    height: 102,
+                    width: 102,
+                    margin: EdgeInsets.all(0),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(appImagesConst.twitterImage),
+                          fit: BoxFit.contain),
+                    ),
+                    padding: EdgeInsets.all(0),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 100,
+            )
           ],
         ),
       ),

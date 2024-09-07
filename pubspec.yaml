@@ -45,6 +45,8 @@ dependencies:
   image_picker: ^1.1.2
   dropdown_button2: ^2.3.9
   carousel_slider: ^5.0.0
+  parallax_cards: ^1.0.2
+  horizontal_list: ^0.0.7
   
 
 dev_dependencies:
