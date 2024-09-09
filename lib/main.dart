@@ -33,8 +33,7 @@ class MyApp extends StatelessWidget {
         builder: (_, child) {
           return const StartNavigationScreen();
         },
-        child: const StartN
-        avigationScreen(),
+        child: const StartNavigationScreen(),
       ),
     );
   }
