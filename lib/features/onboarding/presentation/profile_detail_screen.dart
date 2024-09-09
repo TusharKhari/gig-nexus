@@ -168,6 +168,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                       heading: "Full Name",
                       hintText: "Enter Full Name",
                       controller: fullNameController,
+                      keyboardType: TextInputType.name,
                     ),
                     // CustomFieldWithHeader(
                     //   heading: "Gender",
