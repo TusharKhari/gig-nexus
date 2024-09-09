@@ -14,12 +14,13 @@ class NotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: appColorsConst.cWhite,
       // elevation: 3,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(0), // Rounded corners
       ),
       child: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -14,43 +14,32 @@ class _NotificationPageState extends State<NotificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appColorsConst.cWhite,
+      appBar: AppBar(
+        backgroundColor: appColorsConst.cWhite,
+        leading: InkWell(
+          onTap: () {
+            // Get.toNamed(appRouteNamesConst.loginScreen);
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            size: 32,
+          ),
+        ),
+        centerTitle: true,
+        title: const Text(
+          "Notification",
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color(0xff1E1E1E),
+              fontSize: 28),
+        ),
+      ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
         child: Column(
           children: [
-            const SizedBox(
-              height: 40,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      // Get.toNamed(appRouteNamesConst.loginScreen);
-                      Navigator.pop(context);
-                    },
-                    child: const Icon(
-                      Icons.arrow_back,
-                      size: 32,
-                    ),
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.18,
-                  ),
-                  const Text(
-                    "Notification",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xff1E1E1E),
-                        fontSize: 28),
-                  )
-                ],
-              ),
-            ),
-            // const SizedBox(
-            //   height: 15,
-            // ),
             NotificationCard(
               imagePath: appImagesConst.jobImage,
             ),
