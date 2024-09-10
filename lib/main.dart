@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:gig_nexus/features/auth/presentation/screens/login_screen.dart';
 import 'package:gig_nexus/firebase_options.dart';
+import 'package:gig_nexus/utils/constants/app_constants.dart';
 
 import 'utils/routes/app_route_pages.dart';
 
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       getPages: routePages,
+      theme: ThemeData(
+        scaffoldBackgroundColor: appColorsConst.cFDFDFD
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Gig Nexus',
       home: ScreenUtilInit(

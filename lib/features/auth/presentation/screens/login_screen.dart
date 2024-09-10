@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     "Phone Number",
                     style:
-                        TextStyle(color: appColorsConst.cBlack, fontSize: 16),
+                        TextStyle(color:  appColorsConst.c1E242C, fontSize: 16),
                   ),
                 ],
               ),
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: authController.phoneNumberController,
                 prefixIcon: Image.asset(
                   appImagesConst.callIcon,
-                  color: appColorsConst.textGrey,
+                  color:  appColorsConst.cB4BAC2,
                   scale: 4,
                 ),
                 errorText: "Wrong Phone Number",
@@ -123,14 +123,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Checkbox(
                       value: true,
                       onChanged: (value) {},
-                      checkColor: appColorsConst.cBlue,
+                      checkColor:  appColorsConst.c233C7E,
                       activeColor: appColorsConst.cWhite,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
                       side: WidgetStateBorderSide.resolveWith(
                         (states) =>
-                            BorderSide(width: 1.0, color: appColorsConst.grey),
+                            BorderSide(width: 1.0, color: appColorsConst.c787E86),
                       ),
                     ),
                   ),
@@ -138,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       "I agree to the terms and conditions & privacy policy.",
                       style: TextStyle(
-                          color: appColorsConst.cBlack,
+                          color:  appColorsConst.c1E242C,
                           fontSize: 16,
                           fontWeight: FontWeight.w400),
                     ),
@@ -156,8 +156,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 16,
                 onPressed: () {
                   // authController.sendOtp();
-                  authController.verificationByPhoneNo(
-                      phoneNo: authController.phoneNumberController.text);
+                  // authController.verificationByPhoneNo(
+                  //     phoneNo: authController.phoneNumberController.text);
                   Get.toNamed(appRouteNamesConst.otpVerificationScreen);
                 },
                 title: "Sign In",
@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Image.asset(
                           appImagesConst.notesIcon,
-                          color: appColorsConst.cBlue,
+                          color:  appColorsConst.c233C7E,
                           scale: 4,
                         ),
                         const SizedBox(
@@ -200,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: [
                         Image.asset(
                           appImagesConst.lockIcon,
-                          color: appColorsConst.cBlue,
+                          color:  appColorsConst.c233C7E,
                           scale: 4,
                         ),
                         const SizedBox(
@@ -228,7 +228,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 "Powered By GIGNEXUS",
                 style: TextStyle(
                     fontSize: 18,
-                    color: appColorsConst.gigNexusColor,
+                    color:  appColorsConst.c60666E,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -237,7 +237,7 @@ class _LoginScreenState extends State<LoginScreen> {
             // RichText(
             //   text: TextSpan(
             //     style: TextStyle(
-            //       color: appColorsConst.borderWhite,
+            //       color: appColorsConst.cB4BAC2,
             //       fontSize: 16,
             //     ),
             //     children: const [

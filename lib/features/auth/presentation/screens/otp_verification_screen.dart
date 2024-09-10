@@ -62,7 +62,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 18),
               child: Text(
                 "We sent you a message on your phone number with 4 digit OTP to verify your account.",
-                style: TextStyle(color: appColorsConst.grey, fontSize: 14),
+                style: TextStyle(color: appColorsConst.c787E86, fontSize: 14),
               ),
             ),
             const SizedBox(
@@ -87,7 +87,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: appColorsConst.grey),
+                  border: Border.all(color: appColorsConst.c787E86),
                 ),
               ),
             ),
@@ -102,7 +102,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   RichText(
                     text: TextSpan(
                         style: TextStyle(
-                          color: appColorsConst.cBlack,
+                          color:  appColorsConst.c1E242C,
                           fontSize: 16,
                         ),
                         children: [
@@ -116,13 +116,13 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                               text: " 32s",
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
-                                  color: appColorsConst.cBlue))
+                                  color:  appColorsConst.c233C7E))
                         ]),
                   ),
                   RichText(
                     text: TextSpan(
                         style: TextStyle(
-                          color: appColorsConst.cBlack,
+                          color:  appColorsConst.c1E242C,
                           fontSize: 16,
                         ),
                         children: [
@@ -144,7 +144,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               padding: EdgeInsets.symmetric(horizontal: 18),
               child: Button(
                 onPressed: () {
-                  // Get.to(ProfileDetailScreen());
+                  Get.to(ProfileDetailScreen());
                 },
                 width: double.infinity,
                 title: "Submit",
@@ -157,7 +157,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 18),
               child: Text(
                 "Note : for your account security, do not share your OTP with anyone",
-                style: TextStyle(color: appColorsConst.grey, fontSize: 14),
+                style: TextStyle(color: appColorsConst.c787E86, fontSize: 14),
               ),
             ),
             const SizedBox(
@@ -170,7 +170,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 children: [
                   Text(
                     "MADE WITH",
-                    style: TextStyle(fontSize: 21, color: appColorsConst.cBlue),
+                    style: TextStyle(fontSize: 21, color:  appColorsConst.c233C7E),
                   ),
                   const SizedBox(
                     width: 10,
@@ -186,7 +186,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   ),
                   Text(
                     "IN INDIA",
-                    style: TextStyle(fontSize: 21, color: appColorsConst.cBlue),
+                    style: TextStyle(fontSize: 21, color:  appColorsConst.c233C7E),
                   ),
                 ],
               ),
@@ -200,7 +200,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 "Powered By GIGNEXUS",
                 style: TextStyle(
                     fontSize: 18,
-                    color: appColorsConst.gigNexusColor,
+                    color:  appColorsConst.c60666E,
                     fontWeight: FontWeight.bold),
               ),
             ),

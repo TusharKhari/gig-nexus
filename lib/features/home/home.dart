@@ -226,7 +226,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: appColorsConst.cBlack),
+                        color:  appColorsConst.c1E242C),
                   ),
                   const Spacer(),
                   Row(
@@ -236,7 +236,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
-                            color: appColorsConst.cBlue),
+                            color:  appColorsConst.c233C7E),
                       ),
                       const SizedBox(
                         width: 3,
@@ -244,7 +244,7 @@ class _HomeState extends State<Home> {
                       Icon(
                         Icons.arrow_forward_ios_outlined,
                         size: 18,
-                        color: appColorsConst.cBlue,
+                        color:  appColorsConst.c233C7E,
                       )
                     ],
                   )
@@ -298,7 +298,7 @@ class _HomeState extends State<Home> {
                 child: Center(
                   child: Text(
                     "Ad banners to be added here",
-                    style: TextStyle(fontSize: 16, color: appColorsConst.grey),
+                    style: TextStyle(fontSize: 16, color: appColorsConst.c787E86),
                   ),
                 ),
               ),
@@ -415,7 +415,7 @@ class _HomeState extends State<Home> {
 
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
+              child: Wrap(
                 children: [
                   Container(
                     height: 102,

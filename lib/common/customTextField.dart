@@ -47,7 +47,7 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       style: style ?? const TextStyle(color: Colors.black),
-      cursorColor: cursorColor ?? appColorsConst.borderWhite,
+      cursorColor: cursorColor ?? appColorsConst.cB4BAC2,
       keyboardType: keyboardType ?? TextInputType.text,
       obscureText: obscureText ?? false,
       maxLength: maxLength,
@@ -62,32 +62,32 @@ class CustomTextField extends StatelessWidget {
           prefixIcon: this.prefixIcon,
           errorBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: borderColor ?? appColorsConst.borderWhite,
+              color: borderColor ?? appColorsConst.cB4BAC2,
               width: 1,
             ),
             borderRadius: BorderRadius.circular(borderRadius ?? 14),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: borderColor ?? appColorsConst.borderWhite,
+              color: borderColor ?? appColorsConst.cB4BAC2,
               width: 1,
             ),
             borderRadius: BorderRadius.circular(borderRadius ?? 14),
           ),
-          labelStyle: TextStyle(color: appColorsConst.borderWhite),
+          labelStyle: TextStyle(color: appColorsConst.cB4BAC2),
           floatingLabelBehavior: FloatingLabelBehavior.never,
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: borderColor ?? appColorsConst.borderWhite,
+              color: borderColor ?? appColorsConst.cB4BAC2,
               width: 1,
             ),
             borderRadius: BorderRadius.circular(borderRadius ?? 14),
           ),
           hintStyle: TextStyle(
-              color: appColorsConst.lightGrey, fontWeight: FontWeight.bold),
+              color: appColorsConst.cB4BAC2, fontWeight: FontWeight.bold),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: borderColor ?? appColorsConst.borderWhite,
+              color: borderColor ?? appColorsConst.cB4BAC2,
               width: 1,
             ),
             borderRadius: BorderRadius.circular(borderRadius ?? 14),

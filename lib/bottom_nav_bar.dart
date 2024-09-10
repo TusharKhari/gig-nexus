@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gig_nexus/features/campains/presentation/screens/campaigns_screen.dart';
 import 'package:gig_nexus/features/home/home.dart';
 import 'package:gig_nexus/utils/constants/app_constants.dart';
 
@@ -13,9 +14,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int selectedIndex = 0;
   List items = [
     Home(),
-    Center(
-      child: Text("Compains"),
-    ),
+    CampaignsScreen(),
     Center(
       child: Text("Jobs"),
     ),
@@ -46,8 +45,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
                     scale: 4,
                     fit: BoxFit.none,
                     color: selectedIndex == 0
-                        ? appColorsConst.cBlue
-                        : appColorsConst.grey,
+                        ? appColorsConst.c233C7E
+                        : appColorsConst.c787E86,
                   )),
 
               //   Icon(
@@ -66,7 +65,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                     appImagesConst.campaignsIcon,
                     scale: 4,
                     fit: BoxFit.none,
-                    color: selectedIndex == 1 ? appColorsConst.cBlue : null,
+                    color: selectedIndex == 1 ? appColorsConst.c233C7E : null,
                   )
 
                   // Icon(Icons.do_disturb),

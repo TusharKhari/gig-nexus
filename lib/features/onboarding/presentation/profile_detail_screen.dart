@@ -87,7 +87,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                         Flexible(
                             child: Container(
                           height: 2,
-                          color: appColorsConst.cBlue,
+                          color:  appColorsConst.c233C7E,
                         )),
                         const SizedBox(
                           width: 12,
@@ -95,7 +95,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                         Flexible(
                             child: Container(
                           height: 2,
-                          color: appColorsConst.grey,
+                          color: appColorsConst.c787E86,
                         ))
                       ],
                     ),
@@ -108,17 +108,17 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                         RichText(
                           text: TextSpan(
                             style: TextStyle(
-                              color: appColorsConst.borderWhite,
+                              color: appColorsConst.cB4BAC2,
                               fontSize: 16,
                             ),
                             children: [
                               TextSpan(
                                 text: 'Step 1 ',
-                                style: TextStyle(color: appColorsConst.cBlue),
+                                style: TextStyle(color:  appColorsConst.c233C7E),
                               ),
                               TextSpan(
                                 text: 'of 2',
-                                style: TextStyle(color: appColorsConst.grey),
+                                style: TextStyle(color: appColorsConst.c787E86),
                               ),
                             ],
                           ),

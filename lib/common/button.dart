@@ -42,7 +42,7 @@ class Button extends StatelessWidget {
       width: width ?? 150,
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: buttonColor ?? appColorsConst.cBlue,
+        color: buttonColor ??  appColorsConst.c233C7E,
         borderRadius: BorderRadius.all(Radius.circular(borderRadius??14)),
       ),
       child: ElevatedButton(
@@ -54,7 +54,7 @@ class Button extends StatelessWidget {
           ),
           elevation: MaterialStateProperty.resolveWith((states) => 0),
           backgroundColor: MaterialStateColor.resolveWith(
-            (states) => buttonColor ?? appColorsConst.cBlue,
+            (states) => buttonColor ??  appColorsConst.c233C7E,
           ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(

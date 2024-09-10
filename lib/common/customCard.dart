@@ -63,7 +63,7 @@ class CustomCard extends StatelessWidget {
               ),
             ),
             const Divider(
-              // color: appColorsConst.grey,
+              // color: appColorsConst.c787E86,
               color: Color(0xffE4E4E4),
             ),
             // const SizedBox(height: 16),
@@ -76,7 +76,7 @@ class CustomCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: appColorsConst.cBlue,
+                      color:  appColorsConst.c233C7E,
                     ),
                   ),
                   const Spacer(),

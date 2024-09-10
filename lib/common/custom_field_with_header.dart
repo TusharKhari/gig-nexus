@@ -30,7 +30,7 @@ class CustomFieldWithHeader extends StatelessWidget {
           children: [
             Text(
               heading ?? " ",
-              style: TextStyle(color: appColorsConst.cBlack, fontSize: 16),
+              style: TextStyle(color:  appColorsConst.c1E242C, fontSize: 16),
             ),
           ],
         ),

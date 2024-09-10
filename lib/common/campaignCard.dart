@@ -53,7 +53,7 @@ class CampaignCard extends StatelessWidget {
                       "Airtel",
                       style: TextStyle(
                         fontSize: 14,
-                        color: appColorsConst.textGrey,
+                        color:  appColorsConst.cB4BAC2,
                       ),
                     ),
                   ],
@@ -66,7 +66,7 @@ class CampaignCard extends StatelessWidget {
                       "1d ago",
                       style: TextStyle(
                         fontSize: 12,
-                        color: appColorsConst.textGrey,
+                        color:  appColorsConst.cB4BAC2,
                       ),
                     ),
                     const SizedBox(
@@ -84,7 +84,7 @@ class CampaignCard extends StatelessWidget {
               "Lorem ipsum dolor sit amet consectetur. Proin arcu porttitor dui pellentesque volutpat sem...",
               style: TextStyle(
                 fontSize: 12,
-                color: appColorsConst.grey,
+                color: appColorsConst.c787E86,
               ),
             ),
           ),
@@ -115,7 +115,7 @@ class CampaignCard extends StatelessWidget {
                     Text(
                       "Bank",
                       style: TextStyle(
-                          color: appColorsConst.grey,
+                          color: appColorsConst.c787E86,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
@@ -129,7 +129,7 @@ class CampaignCard extends StatelessWidget {
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 18,
-                          color: appColorsConst.cBlue),
+                          color:  appColorsConst.c233C7E),
                     ),
                     const SizedBox(
                       width: 3,
@@ -137,7 +137,7 @@ class CampaignCard extends StatelessWidget {
                     Icon(
                       Icons.arrow_forward_ios_outlined,
                       size: 18,
-                      color: appColorsConst.cBlue,
+                      color:  appColorsConst.c233C7E,
                     )
                   ],
                 )
@@ -148,7 +148,7 @@ class CampaignCard extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Divider(
-              // color: appColorsConst.grey,
+              // color: appColorsConst.c787E86,
               color: Color(0xffE4E4E4),
             ),
           ),

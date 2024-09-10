@@ -81,7 +81,7 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                         Flexible(
                             child: Container(
                           height: 2,
-                          color: appColorsConst.cBlue,
+                          color:  appColorsConst.c233C7E,
                         )),
                         const SizedBox(
                           width: 12,
@@ -89,7 +89,7 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                         Flexible(
                             child: Container(
                           height: 2,
-                          color: appColorsConst.grey,
+                          color: appColorsConst.c787E86,
                         ))
                       ],
                     ),
@@ -102,17 +102,17 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                         RichText(
                           text: TextSpan(
                             style: TextStyle(
-                              color: appColorsConst.borderWhite,
+                              color: appColorsConst.cB4BAC2,
                               fontSize: 16,
                             ),
                             children: [
                               TextSpan(
                                 text: 'Step 1 ',
-                                style: TextStyle(color: appColorsConst.cBlue),
+                                style: TextStyle(color:  appColorsConst.c233C7E),
                               ),
                               TextSpan(
                                 text: 'of 2',
-                                style: TextStyle(color: appColorsConst.grey),
+                                style: TextStyle(color: appColorsConst.c787E86),
                               ),
                             ],
                           ),
@@ -163,7 +163,7 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                     ),
                     // Text(
                     //   "Your Pan number is totally secure",
-                    //   style: TextStyle(color: appColorsConst.grey, fontSize: 14),
+                    //   style: TextStyle(color: appColorsConst.c787E86, fontSize: 14),
                     // ),
                     const SizedBox(
                       height: 18,
@@ -171,7 +171,7 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                     Text(
                       "Bank Account Details",
                       style: TextStyle(
-                        color: appColorsConst.cBlack,
+                        color:  appColorsConst.c1E242C,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -186,7 +186,7 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                       hintText: "Please Select",
                       suffixIcon: Icon(
                         Icons.keyboard_arrow_down_sharp,
-                        color: appColorsConst.lightGrey,
+                        color: appColorsConst.cB4BAC2,
                       ),
                     ),
                     CustomFieldWithHeader(
@@ -209,14 +209,14 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                     Text(
                       "Upload Checkbook/Passbook/Bank Statement (Front Page)",
                       style:
-                          TextStyle(color: appColorsConst.cBlack, fontSize: 12),
+                          TextStyle(color:  appColorsConst.c1E242C, fontSize: 12),
                     ),
                     const SizedBox(
                       height: 12,
                     ),
                     controller.bankProofImage == null
                         ? Button(
-                            borderColor: appColorsConst.cBlue,
+                            borderColor:  appColorsConst.c233C7E,
                             buttonColor: appColorsConst.cWhite,
                             onPressed: () async {
                               var image = await AppCommonFunctions()
@@ -233,7 +233,7 @@ class _KYCDetailsScreenState extends State<KYCDetailsScreen> {
                                 Text(
                                   "Upload",
                                   style: TextStyle(
-                                      color: appColorsConst.cBlue,
+                                      color:  appColorsConst.c233C7E,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500),
                                 )
